@@ -1,7 +1,10 @@
 import os
 import sys
 import argparse
-
+#import test_install
+#from test_install import install_test
+#from sample.test_install import install_test
+from sample import test_install
 def main():
     
     print(f"current script path: {sys.argv[0]}")
@@ -26,13 +29,17 @@ def main():
     args = parser.parse_args()
     if args.dcmfile == None:
         print("please input dcm filename")
-        exit()
+        #exit()
+        sys.exit()
     if args.labelmap == None:
         print("please input label filename")
-        exit()
+        #exit()
+        sys.exit()
 
     return
 
 if __name__ == '__main__':
+    test_install.install_test()
+    #install_test()
     main()
 
